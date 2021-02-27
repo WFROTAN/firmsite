@@ -53,6 +53,10 @@ const Nav = styled.nav`
   width: 100vw;
   z-index: 1000;
   flex-wrap: wrap;
+  margin-left: 0px;
+  @media ${media.lg} {
+    margin-left: 20px;
+  }
 `
 
 const NavLinks = styled.ul`

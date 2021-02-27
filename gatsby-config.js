@@ -5,12 +5,6 @@ module.exports = {
     author: `@moonclerk`,
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        devMode: true,
-      },
-    },
     `gatsby-plugin-react-helmet`,
 
     `gatsby-transformer-sharp`,
