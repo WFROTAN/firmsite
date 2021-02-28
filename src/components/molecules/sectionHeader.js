@@ -60,21 +60,32 @@ const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 100vh;
+  height: 120vh;
   margin-bottom: 4rem;
   padding: 0 var(--spacingContent);
 
   @media ${media.lg} {
     flex-direction: row-reverse;
     min-height: 800px;
+    height: 100vh;
   }
 `
+/*
+display: block;
+flex-basis: 100%;
+padding-top: 12rem;
+width: 100%;
+*/
 
 const Image = styled.div`
   display: block;
   flex-basis: 100%;
   padding-top: 12rem;
   width: 100%;
+
+  img {
+    height: 10px;
+  }
 
   @media ${media.lg} {
     padding: 0;
@@ -104,9 +115,13 @@ const Content = styled.div`
 `
 
 const HeaderCurve = styled.svg`
-  top: 100vh;
-  left: 0;
-  position: absolute;
-  width: 100vw;
-  height: auto;
+  display: none;
+
+  @media ${media.lg} {
+    top: 100vh;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: auto;
+  }
 `

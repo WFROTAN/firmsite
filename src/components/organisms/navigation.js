@@ -24,11 +24,6 @@ const Navigation = ({ siteTitle }) => (
           Stripe
         </NavLink>
       </li>
-      <li>
-        <NavLink href="https://netlify.com" alt="">
-          Netlify
-        </NavLink>
-      </li>
     </NavLinks>
   </Nav>
 )
@@ -64,8 +59,8 @@ const NavLinks = styled.ul`
   justify-content: flex-start;
   list-style: none;
   margin: 0;
-  padding-left: 0;
-  padding-top: 2rem;
+  padding-left: 0px;
+  padding-top: 10px;
 
   @media ${media.lg} {
     padding-left: 2rem;
