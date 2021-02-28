@@ -60,7 +60,7 @@ const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 120vh;
+  height: 135vh;
   padding: 0 var(--spacingContent);
 
   @media ${media.lg} {
