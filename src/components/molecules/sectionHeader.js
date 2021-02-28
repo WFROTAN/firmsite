@@ -25,7 +25,9 @@ const SectionHeader = () => {
       </Image>
       <Content>
         <Subheading>Get Started</Subheading>
-        <h1>Quickly Accept Payments with Gatsby & MoonClerk</h1>
+        <HeadingDetail>
+          <h1>Quickly Accept Payments with Gatsby & MoonClerk</h1>
+        </HeadingDetail>
         <Button href="#checkout">Checkout</Button>
       </Content>
       <HeaderCurve fill="none" viewBox="0 0 1680 232">
@@ -39,6 +41,17 @@ const SectionHeader = () => {
 }
 
 export default SectionHeader
+
+const HeadingDetail = styled.div`
+  h1 {
+    font-size: 50px;
+  }
+  @media ${media.lg} {
+    h1 {
+      font-size: 75px;
+    }
+  }
+`
 
 const HeaderContainer = styled.header`
   align-items: center;
