@@ -61,7 +61,6 @@ const HeaderContainer = styled.header`
   flex-direction: column;
   position: relative;
   height: 120vh;
-  margin-bottom: 4rem;
   padding: 0 var(--spacingContent);
 
   @media ${media.lg} {
@@ -70,12 +69,6 @@ const HeaderContainer = styled.header`
     height: 100vh;
   }
 `
-/*
-display: block;
-flex-basis: 100%;
-padding-top: 12rem;
-width: 100%;
-*/
 
 const Image = styled.div`
   display: block;
