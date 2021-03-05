@@ -11,7 +11,7 @@ import List from "@atoms/list"
 import Subheading from "@atoms/subheading"
 import SectionHeader from "@molecules/sectionHeader"
 import SectionSetup from "@molecules/sectionSetup"
-import SectionPricing from "@molecules/SectionPricing"
+import SectionPricing from "@molecules/sectionPricing"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
