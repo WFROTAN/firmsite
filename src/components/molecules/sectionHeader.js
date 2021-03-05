@@ -68,6 +68,12 @@ const HeaderContainer = styled.header`
     min-height: 800px;
     height: 100vh;
   }
+
+  @media screen and (min-width: 815px) {
+    flex-direction: row-reverse;
+    min-height: 800px;
+    height: 100vh;
+  }
 `
 
 const Image = styled.div`
@@ -84,6 +90,10 @@ const Image = styled.div`
     padding: 0;
     width: 60%;
     flex-basis: 60%;
+  }
+
+  @media screen and (max-width: 1199px) and (min-width: 814px) {
+    padding-top: 1rem;
   }
 
   .gatsby-image-wrapper {
@@ -110,7 +120,8 @@ const Content = styled.div`
 const HeaderCurve = styled.svg`
   display: none;
 
-  @media ${media.lg} {
+  @media screen and (min-width: 815px) {
+    display: block;
     top: 100vh;
     left: 0;
     position: absolute;
