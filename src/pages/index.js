@@ -11,6 +11,7 @@ import List from "@atoms/list"
 import Subheading from "@atoms/subheading"
 import SectionHeader from "@molecules/sectionHeader"
 import SectionSetup from "@molecules/sectionSetup"
+import SectionPricing from "@molecules/SectionPricing"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -135,6 +136,7 @@ const IndexPage = () => {
           </Button>
         </ContentBlock>
       </ContentContainer>
+      <SectionPricing />
     </Layout>
   )
 }
