@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import Button from "@atoms/button"
+
 const SectionPricing = () => {
   return (
     <OverContainer>
@@ -79,9 +81,45 @@ const SectionPricing = () => {
           </MonthDetails>
         </ContainerItems>
       </MonthContainer>
+      <FormContainer>
+        <div className="form-details">
+          <h2>Interested? Contact Us!</h2>
+          <form>
+            <div className="form-row">
+              <label>
+                First Name:
+                <input type="text" name="name" />
+              </label>
+              <label>
+                Last Name:
+                <input type="text" name="name" />
+              </label>
+            </div>
+            <div className="form-row">
+              <label>
+                Email:
+                <input type="text" name="name" />
+              </label>
+              <label>
+                Phone Number:
+                <input type="text" name="name" />
+              </label>
+            </div>
+            <div className="userText">
+              <h4>How can we help you with your website?</h4>
+              <textarea rows="10" cols="60"></textarea>
+            </div>
+            <Button id="button-form" href="#checkout">
+              Contact
+            </Button>
+          </form>
+        </div>
+      </FormContainer>
     </OverContainer>
   )
 }
+
+//<input id="submit" type="submit" value="Submit" />
 
 const OverContainer = styled.div`
   margin-bottom: 200px;
@@ -102,6 +140,70 @@ const CardContainer = styled.div`
 const MonthContainer = styled.div`
   display: flex;
   justify-content: space-around;
+  margin-bottom: 100px;
+`
+
+const FormContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+
+  background-color: #f9f6f3;
+
+  & .form-details {
+    width: 1100px;
+
+    .userText {
+      text-align: left;
+      h4 {
+        margin-bottom: 10px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      #button-form {
+        margin-bottom: 12px;
+      }
+
+      .form-row {
+        display: flex;
+        justify-content: space-between;
+        width: 68%;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        text-align: left;
+      }
+
+      input {
+        border: 0px solid;
+        border-radius: 5px;
+      }
+
+      textarea {
+        margin-bottom: 30px;
+        border: 0px solid;
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      #submit {
+        width: 100px;
+      }
+    }
+  }
 `
 
 const ContainerItems = styled.div`
@@ -136,7 +238,7 @@ const PricingCard = styled.div`
 
 const Seperator = styled.div`
   padding: 100px 0px 50px 0px;
-  background-color: #e4e9e6;
+  background-color: #f9f6f3;
   margin-bottom: 100px;
   text-align: center;
 `
