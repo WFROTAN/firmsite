@@ -49,7 +49,7 @@ const SectionPricing = () => {
       </Seperator>
       <MonthContainer>
         <ContainerItems>
-          <PricingCard>
+          <PricingCard id="monthly-card">
             <div className="pricingHeader">
               <h3>Monthly Service Charge</h3>
               <h1>
@@ -112,7 +112,7 @@ const SectionPricing = () => {
             </div>
             <div className="userText">
               <h4>How can we help you with your website?</h4>
-              <textarea rows="10" cols="60"></textarea>
+              <textarea rows="10"></textarea>
             </div>
             <Button id="button-form" href="#checkout">
               Contact
@@ -186,12 +186,17 @@ const FormContainer = styled.div`
   background-color: #f9f6f3;
 
   & .form-details {
-    width: 1100px;
+    width: 748px;
 
     .userText {
+      width: 100%;
       text-align: left;
       h4 {
         margin-bottom: 10px;
+      }
+
+      @media screen and (max-width: 772px) {
+        padding: 15px;
       }
     }
 
@@ -212,7 +217,23 @@ const FormContainer = styled.div`
       .form-row {
         display: flex;
         justify-content: space-between;
-        width: 68%;
+        width: 748px;
+
+        input {
+          padding: 10px;
+        }
+
+        @media screen and (max-width: 864px) {
+          width: 604px;
+        }
+
+        @media screen and (max-width: 639px) {
+          width: 95%;
+        }
+
+        @media screen and (max-width: 564px) {
+          flex-direction: column;
+        }
       }
 
       label {
@@ -232,6 +253,7 @@ const FormContainer = styled.div`
         border: 0px solid;
         border-radius: 5px;
         padding: 5px;
+        width: 100%;
       }
 
       #submit {
@@ -247,9 +269,22 @@ const ContainerItems = styled.div`
   width: 1100px;
   margin: 0px 30px;
 
+  #monthly-card {
+    margin-right: 40px;
+  }
+
   @media screen and (max-width: 864px) {
     flex-direction: column;
     align-items: center;
+
+    #monthly-card {
+      margin-right: 0px;
+      margin-bottom: 100px;
+    }
+  }
+
+  @media screen and (max-width: 525px) {
+    width: 95%;
   }
 `
 
@@ -258,6 +293,10 @@ const MonthDetails = styled.div`
   flex-direction: column;
   justify-content: space-around;
   width: 500px;
+
+  @media screen and (max-width: 525px) {
+    width: 95%;
+  }
 `
 
 const PricingCard = styled.div`
