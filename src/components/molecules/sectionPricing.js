@@ -2,13 +2,18 @@ import React from "react"
 import styled from "styled-components"
 
 import Button from "@atoms/button"
+import Subheading from "@atoms/subheading"
 
 const SectionPricing = () => {
   return (
     <OverContainer>
+      <div className="sub-heading">
+        <Subheading>Pricing</Subheading>
+        <h2>Choose from two simple options.</h2>
+      </div>
       <PricingContainer>
         <CardContainer>
-          <PricingCard>
+          <PricingCard className="left-card">
             <div className="pricingHeader">
               <h3>Basic Launch Kit</h3>
               <h1>$500</h1>
@@ -123,6 +128,22 @@ const SectionPricing = () => {
 
 const OverContainer = styled.div`
   margin-bottom: 200px;
+
+  .sub-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 484px) {
+      text-align: center;
+
+      h2 {
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+    }
+  }
 `
 
 const PricingContainer = styled.div`
@@ -135,6 +156,21 @@ const CardContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 1100px;
+  margin: 0px 30px;
+
+  .left-card {
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: 864px) {
+    flex-direction: column;
+    align-items: center;
+
+    .left-card {
+      margin-right: 0px;
+      margin-bottom: 50px;
+    }
+  }
 `
 
 const MonthContainer = styled.div`
@@ -147,7 +183,6 @@ const FormContainer = styled.div`
   display: flex;
   justify-content: space-around;
   text-align: center;
-
   background-color: #f9f6f3;
 
   & .form-details {
@@ -210,6 +245,12 @@ const ContainerItems = styled.div`
   display: flex;
   justify-content: space-between;
   width: 1100px;
+  margin: 0px 30px;
+
+  @media screen and (max-width: 864px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const MonthDetails = styled.div`
@@ -234,6 +275,21 @@ const PricingCard = styled.div`
   & #month {
     font-size: 30px;
   }
+
+  @media screen and (max-width: 1072px) {
+    padding: 50px 30px;
+  }
+
+  @media screen and (max-width: 934px) {
+    padding: 50px;
+  }
+
+  @media screen and (max-width: 580px) {
+    width: 95%;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 50px 10px;
+  }
 `
 
 const Seperator = styled.div`
@@ -250,6 +306,10 @@ const PricingList = styled.ul`
   & li:before {
     font-weight: bold;
     content: "✓ ";
+  }
+
+  @media screen and (max-width: 945px) {
+    font-size: 15px;
   }
 `
 
