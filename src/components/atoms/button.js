@@ -5,7 +5,7 @@ const Button = styled.a`
   border-radius: ${props => props.theme.button.radius};
   font-weight: 500;
   padding: 0.75rem 2rem;
-  color: ${props => props.theme.colors.black};
+  color: white;
   text-decoration: none;
   transition: ${props => props.theme.animation.transition};
 

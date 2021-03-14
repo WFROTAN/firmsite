@@ -4,6 +4,8 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { media } from "@utils/media"
 
+import "./logo.css"
+
 const Logo = () => {
   const data = useStaticQuery(graphql`
     query headerImageQueryAndHeaderImageQuery {
@@ -17,14 +19,7 @@ const Logo = () => {
     }
   `)
 
-  return (
-    <LogoContainer>
-      <RedCircle>
-        <Img fluid={data.file.childImageSharp.fluid} />
-      </RedCircle>
-      {/*<StarterLogo>afterRed</StarterLogo>*/}
-    </LogoContainer>
-  )
+  return <LogoContainer className="logo-container">AfterRed</LogoContainer>
 }
 
 export default Logo
@@ -33,7 +28,14 @@ const LogoContainer = styled.div`
   position: relative;
 `
 
-const StarterLogo = styled.div`
+/*
+<StarterLogo>afterRed</StarterLogo>
+
+      <RedCircle>
+        <Img fluid={data.file.childImageSharp.fluid} />
+      </RedCircle>
+
+      const StarterLogo = styled.div`
   font-size: 30px;
   margin-right: 20px;
   @media ${media.lg} {
@@ -44,3 +46,4 @@ const StarterLogo = styled.div`
 const RedCircle = styled.div`
   width: 100px;
 `
+*/

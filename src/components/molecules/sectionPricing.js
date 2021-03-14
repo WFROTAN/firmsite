@@ -20,9 +20,18 @@ const SectionPricing = () => {
             </div>
             <PricingList>
               <li>Live Strategy & Design Preferences Call</li>
-              <li>Template: Custom built for you</li>
-              <li>Text: You submit Launch Overview Form</li>
-              <li>Photos: We optimize and place</li>
+              <li>
+                <span style={{ fontWeight: 700 }}>Template:</span> Custom built
+                for you
+              </li>
+              <li>
+                <span style={{ fontWeight: 700 }}>Text:</span> You submit Launch
+                Overview Form
+              </li>
+              <li>
+                <span style={{ fontWeight: 700 }}>Photos:</span> We optimize and
+                place
+              </li>
               <li>Up to 10 Pages + FREE Reviews Tool</li>
               <li>$50/mo support & training (details below)</li>
             </PricingList>
@@ -34,9 +43,18 @@ const SectionPricing = () => {
             </div>
             <PricingList>
               <li>Live Strategy & Design Preferences Call</li>
-              <li>Template: Custom built for you</li>
-              <li>Text: You submit Launch Overview Form</li>
-              <li>Photos: We optimize and place</li>
+              <li>
+                <span style={{ fontWeight: 700 }}>Template:</span> Custom built
+                for you
+              </li>
+              <li>
+                <span style={{ fontWeight: 700 }}>Text:</span> You submit Launch
+                Overview Form
+              </li>
+              <li>
+                <span style={{ fontWeight: 700 }}>Photos:</span> We optimize and
+                place
+              </li>
               <li>Up to 10 Pages + FREE Reviews Tool</li>
               <li>$50/mo support & training (details below)</li>
             </PricingList>
@@ -92,21 +110,21 @@ const SectionPricing = () => {
           <form>
             <div className="form-row">
               <label>
-                First Name:
+                First Name
                 <input type="text" name="name" />
               </label>
               <label>
-                Last Name:
+                Last Name
                 <input type="text" name="name" />
               </label>
             </div>
             <div className="form-row">
               <label>
-                Email:
+                Email
                 <input type="text" name="name" />
               </label>
               <label>
-                Phone Number:
+                Phone Number
                 <input type="text" name="name" />
               </label>
             </div>
@@ -191,12 +209,32 @@ const FormContainer = styled.div`
     .userText {
       width: 100%;
       text-align: left;
+      background-color: white;
+      padding: 0px 10px;
+      padding-top: 5px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+
       h4 {
+        font-size: 12px;
         margin-bottom: 10px;
+      }
+
+      textarea {
+        outline-width: 0;
+        width: 100% !important;
       }
 
       @media screen and (max-width: 772px) {
         padding: 15px;
+      }
+
+      @media screen and (max-width: 864px) {
+        width: 604px;
+      }
+
+      @media screen and (max-width: 639px) {
+        width: 95%;
       }
     }
 
@@ -233,6 +271,10 @@ const FormContainer = styled.div`
 
         @media screen and (max-width: 564px) {
           flex-direction: column;
+
+          label {
+            width: 100%;
+          }
         }
       }
 
@@ -241,19 +283,30 @@ const FormContainer = styled.div`
         flex-direction: column;
         margin-bottom: 50px;
         text-align: left;
+        background-color: white;
+        padding: 0px 10px;
+        padding-top: 5px;
+        border-radius: 2px;
+        font-size: 12px;
+        width: 48%;
       }
 
       input {
         border: 0px solid;
         border-radius: 5px;
+        outline-width: 0;
+        font-size: 20px;
+        padding: 0px !important;
+        margin: 0px !important;
+        padding-bottom: 10px !important;
       }
 
       textarea {
-        margin-bottom: 30px;
         border: 0px solid;
         border-radius: 5px;
         padding: 5px;
         width: 100%;
+        resize: none;
       }
 
       #submit {
@@ -303,12 +356,17 @@ const PricingCard = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 50px;
+
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
 
   & .pricingHeader {
     text-align: center;
+
+    h1 {
+      color: #eb3423;
+    }
   }
 
   & #month {
